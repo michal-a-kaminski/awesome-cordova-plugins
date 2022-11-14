@@ -152,6 +152,11 @@ export interface BackgroundGeolocationResponse {
    * You can enable it "postTemplate" configure option.
    */
   mockLocationsEnabled?: boolean;
+  order_id?: number;
+  user_id?: number;
+  ongoing?: boolean;
+  paused?: boolean;
+  date?: number;
 }
 
 export interface BackgroundGeolocationConfig {
@@ -432,6 +437,10 @@ export interface BackgroundGeolocationConfig {
    * Provider: all
    */
   postTemplate?: any;
+  order_id?: number;
+  user_id?: number;
+  ongoing?: boolean;
+  paused?: boolean;
 }
 
 /**
