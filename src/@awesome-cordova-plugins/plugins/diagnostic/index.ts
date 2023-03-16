@@ -66,9 +66,9 @@ export class Diagnostic extends AwesomeCordovaNativePlugin {
     WRITE_EXTERNAL_STORAGE: 'WRITE_EXTERNAL_STORAGE',
     READ_EXTERNAL_STORAGE: 'READ_EXTERNAL_STORAGE',
     BODY_SENSORS: 'BODY_SENSORS',
-    BLUETOOTH_ADVERTISE: "BLUETOOTH_ADVERTISE",
-    BLUETOOTH_SCAN: "BLUETOOTH_SCAN",
-    BLUETOOTH_CONNECT: "BLUETOOTH_CONNECT",
+    BLUETOOTH_ADVERTISE: 'BLUETOOTH_ADVERTISE',
+    BLUETOOTH_SCAN: 'BLUETOOTH_SCAN',
+    BLUETOOTH_CONNECT: 'BLUETOOTH_CONNECT',
   };
 
   @CordovaProperty()
@@ -116,7 +116,7 @@ export class Diagnostic extends AwesomeCordovaNativePlugin {
     SENSORS: ['BODY_SENSORS'],
     SMS: ['SEND_SMS', 'RECEIVE_SMS', 'READ_SMS', 'RECEIVE_WAP_PUSH', 'RECEIVE_MMS'],
     STORAGE: ['READ_EXTERNAL_STORAGE', 'WRITE_EXTERNAL_STORAGE'],
-    NEARBY_DEVICES: ["BLUETOOTH_ADVERTISE", "BLUETOOTH_SCAN", "BLUETOOTH_CONNECT"],
+    NEARBY_DEVICES: ['BLUETOOTH_ADVERTISE', 'BLUETOOTH_SCAN', 'BLUETOOTH_CONNECT'],
   };
 
   locationMode = {
@@ -168,6 +168,15 @@ export class Diagnostic extends AwesomeCordovaNativePlugin {
     ADD_ONLY: 'add_only',
     READ_WRITE: 'read_write',
   };
+  /**
+   * Checks if app has battery optimization off.
+   *
+   * @returns {Promise<any>}
+   */
+  @Cordova()
+  isBatteryOptimizationOff(): Promise<any> {
+    return;
+  }
 
   /**
    * Checks if app is able to access device location.
