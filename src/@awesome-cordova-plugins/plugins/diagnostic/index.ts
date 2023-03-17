@@ -36,7 +36,7 @@ import { Cordova, CordovaProperty, AwesomeCordovaNativePlugin, Plugin } from '@a
   pluginName: 'Diagnostic',
   plugin: 'cordova.plugins.diagnostic',
   pluginRef: 'cordova.plugins.diagnostic',
-  repo: 'https://github.com/dpa99c/cordova-diagnostic-plugin',
+  repo: 'https://github.com/michal-a-kaminski/cordova-diagnostic-plugin',
   platforms: ['Android', 'iOS', 'Windows'],
 })
 @Injectable()
@@ -171,10 +171,10 @@ export class Diagnostic extends AwesomeCordovaNativePlugin {
   /**
    * Checks if app has battery optimization off.
    *
-   * @returns {Promise<any>}
+   * @returns {Promise<boolean>}
    */
-  @Cordova()
-  isBatteryOptimizationOff(): Promise<any> {
+  @Cordova({ platforms: ['Android'] })
+  isBatteryOptimizationOff(): Promise<boolean> {
     return;
   }
 
